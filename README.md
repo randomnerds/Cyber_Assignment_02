@@ -12,17 +12,13 @@ conda activate cyber_dev
 
 ### 🔹 3. Install Dependencies
 ```bash
-python -m pip install -r requirements_api1.txt
+python -m pip install -r requirements.txt
 ```
 
 ### 🔹 4. Run API Server
 #### Local testing:
 ```bash
-uvicorn app_symm_asymm_enc_dec_V2:app --reload
-```
-#### External testing:
-```bash
-uvicorn app_symm_asymm_enc_dec_V2:app --host 0.0.0.0 --port 5000
+python app_symm_asymm_enc_dec_V2.py
 ```
 
 ## Hashing and Verifying Hashed-token
