@@ -60,7 +60,7 @@ For symmetric-key encryption, AES keys can be generated using key sizes of 128, 
 For encryption and decryption parts also, both AES and RSA methods can be used with respective key IDs.
 
 #### **B. Run API Server Externally**:
-We have already run the above command in an AWS EC2 Instance and hosted the API under the URL ```http://16.170.240.86:8000``` for generating the hash and verifying the hashed-token. Do note that port `8000` is used for the cyptographic API operations. 
+We have already run the above command in an AWS EC2 Instance and hosted the API under the URL ```http://16.170.240.86:8000``` for key generation, encryption and decryption. Do note that port `8000` is used for the cyptographic API operations. 
 
 #### **Test Using Postman**:
 
@@ -74,6 +74,7 @@ We have already run the above command in an AWS EC2 Instance and hosted the API 
   "key_size": "256"
 }
 ```
+For symmetric-key encryption, AES keys can be generated using key sizes of 128, 192 and 256 bits. For asymmetric-key encryption, RSA key pairs can be generated using key sizes of 2048 and 4096 bits.
 
 **Data Encryption**
 * Method: ```POST```
@@ -98,7 +99,7 @@ We have already run the above command in an AWS EC2 Instance and hosted the API 
   "algorithm": "AES"
 }
 ```
-
+For encryption and decryption parts also, both AES and RSA methods can be used with respective key IDs.
 
 ## Hashing and Verifying Hashed-token
 
