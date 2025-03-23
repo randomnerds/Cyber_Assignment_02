@@ -1,22 +1,21 @@
 # Cyber_Assignment_02
 
-### 🔹 1. Clone the Repository
+## 🔹 1. Clone the Repository
 
-### 🔹 2. Create and Activate a Conda Environment
+## 🔹 2. Create and Activate a Conda Environment
 ```bash
 conda create --name crypto python=3.10
 conda activate crypto
 ```
 
-### 🔹 3. Install Dependencies
+## 🔹 3. Install Dependencies
 ```bash
 python -m pip install -r requirements.txt
 ```
 
-## Cryptographic API Development
+## API Development for Symmetric/Asymmetric Encryption and Decryption
 
-### 🔹 4. Run API Server
-#### Local testing:
+### **A. Run API Server Locally**
 ```bash
 python app_symm_asymm_enc_dec_V2.py
 ```
@@ -63,7 +62,7 @@ For symmetric-key encryption, AES keys can be generated using key sizes of 128, 
 ```
 For encryption and decryption parts also, both AES and RSA methods can be used with respective key IDs.
 
-#### **B. Run API Server Externally**:
+### **B. Run API Server Externally**:
 We have already run the above command in an AWS EC2 Instance and hosted the API under the URL ```http://16.170.240.86:8000``` for key generation, encryption and decryption. Do note that port `8000` is used for the cyptographic API operations. 
 
 #### **Test Using Postman**:
@@ -105,7 +104,7 @@ For symmetric-key encryption, AES keys can be generated using key sizes of 128, 
 ```
 For encryption and decryption parts also, both AES and RSA methods can be used with respective key IDs.
 
-## Hashing and Verifying Hashed-token
+## API Development for Hashing and Verifying Hashed-tokens
 
 #### **A. Run API Server Locally**
 ```bash
@@ -140,7 +139,7 @@ uvicorn hash_main:app --reload
 ```bash
 uvicorn hash_main:app --host 0.0.0.0 --port 5000
 ```
-We have already run the above command in an AWS EC2 Instance and hosted the API under the URL ```http://16.170.240.86:5000``` for generating the hash and verifying the hashed-token. Do note that port `5000` is used for the hash implementation. 
+We have already run the above command in an AWS EC2 Instance and hosted the API under the URL ```http://16.170.240.86:5000``` for generating the hash and verifying the hashed-token. Do note that port `5000` is used for the hash operations. 
 
 #### **Test Using Postman**:
 
