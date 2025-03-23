@@ -22,6 +22,10 @@ python app_symm_asymm_enc_dec_V2.py
 ```
 #### **Test Using Postman**:
 
+**Setting Up Headers**
+* Key: ```Content-Type```
+* Value: ```application/json```
+  
 **Key Generation**
 * Method: ```POST```
 * URL: ```http://127.0.0.1:5000/generate-key```
