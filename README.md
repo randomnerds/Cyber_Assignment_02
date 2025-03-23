@@ -14,6 +14,7 @@ python -m pip install -r requirements.txt
 ```
 
 ## API Development for Symmetric/Asymmetric Encryption and Decryption
+We developed the API for this section using Flask as the web framework. 
 
 ## **A. Run API Server Locally**
 ```bash
@@ -105,6 +106,8 @@ For symmetric-key encryption, AES keys can be generated using key sizes of 128, 
 For encryption and decryption parts also, both AES and RSA methods can be used with respective key IDs.
 
 ## API Development for Hashing and Verifying Hashed-tokens
+
+We developed the API for this section using FastAPI as the web framework (to learn API creation with various tools) and Python's built-in `hashlib` library for cryptographic hashing.  
 
 ## **A. Run API Server Locally**
 ```bash
