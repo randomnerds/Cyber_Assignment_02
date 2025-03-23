@@ -47,9 +47,6 @@ python app_symm_asymm_enc_dec_V2.py
 
 ## Hashing and Verifying Hashed-token
 
-
-
-### 🔹 4. Run API Server
 #### **A. Run API Server Locally**
 ```bash
 uvicorn hash_main:app --reload
