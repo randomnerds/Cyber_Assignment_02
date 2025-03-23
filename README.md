@@ -70,7 +70,7 @@ We have already run the above command in an AWS EC2 Instance and hosted the API 
 
 **Key Generation**
 * Method: ```POST```
-* URL: ```http://16.170.240.86:8000/generate-key```
+* URL: ```http://16.170.253.4:8000/generate-key```
 * Body (raw, JSON):
 ```bash
 {
@@ -82,7 +82,7 @@ For symmetric-key encryption, AES keys can be generated using key sizes of 128, 
 
 **Data Encryption**
 * Method: ```POST```
-* URL: ```http://16.170.240.86:8000/encrypt```
+* URL: ```http://16.170.253.4:8000/encrypt```
 * Body (raw, JSON):
 ```bash
 {
@@ -94,7 +94,7 @@ For symmetric-key encryption, AES keys can be generated using key sizes of 128, 
 
 **Data Decryption**
 * Method: ```POST```
-* URL: ```http://16.170.240.86:8000/decrypt```
+* URL: ```http://16.170.253.4:8000/decrypt```
 * Body (raw, JSON):
 ```bash
 {
@@ -148,7 +148,7 @@ We have already run the above command in an AWS EC2 Instance and hosted the API 
 
 **Generate Hash**
 * Method: ```POST```
-* URL: ```http://16.170.240.86:5000/generate-hash```
+* URL: ```http://16.170.253.4:5000/generate-hash```
 * Body (raw, JSON):
 ```bash
 {
@@ -159,7 +159,7 @@ We have already run the above command in an AWS EC2 Instance and hosted the API 
 
 **Verifying Hashed-token**
 * Method: ```POST```
-* URL: ```http://16.170.240.86:5000/verify-hash```
+* URL: ```http://16.170.253.4:5000/verify-hash```
 * Body (raw, JSON):
 ```bash
 {
