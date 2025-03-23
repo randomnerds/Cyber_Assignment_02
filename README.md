@@ -70,6 +70,8 @@ uvicorn hash_main:app --reload
 ```bash
 uvicorn hash_main:app --host 0.0.0.0 --port 5000
 ```
+We have already run the above command in an AWS EC2 Instance and hosted the API under the URL ```http://16.170.240.86:5000```. 
+
 #### **Test Using Postman**:
 
 **Generate Hash**
