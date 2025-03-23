@@ -37,11 +37,11 @@ python -m pip install -r requirements.txt
 ```
 
 ### 🔹 4. Run API Server
-#### Run API Server Locally:
+#### **A. Run API Server Locally**
 ```bash
 uvicorn hash_main:app --reload
 ```
-##### Test Using Postman:
+#### **Test Using Postman**:
 
 **Generate Hash**
 * Method: ```POST```
@@ -66,10 +66,11 @@ uvicorn hash_main:app --reload
 }
 ```
 
-#### Run API Server Externally:
+#### **B. Run API Server Externally**:
 ```bash
 uvicorn hash_main:app --host 0.0.0.0 --port 5000
 ```
+#### **Test Using Postman**:
 
 **Generate Hash**
 * Method: ```POST```
