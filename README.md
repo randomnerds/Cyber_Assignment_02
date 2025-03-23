@@ -37,11 +37,59 @@ python -m pip install -r requirements.txt
 ```
 
 ### 🔹 4. Run API Server
-#### Local testing:
+#### Run API Server Locally:
 ```bash
 uvicorn hash_main:app --reload
 ```
-#### External testing:
+##### Test Using Postman:
+
+**Generate Hash**
+* Method: ```POST```
+* URL: ```http://127.0.0.1:8000/generate-hash```
+* Body (raw, JSON):
+```bash
+{
+  "data": "Hello World",
+  "algorithm": "sha256"
+}
+```
+
+**Verifying Hashed-token**
+* Method: ```POST```
+* URL: ```http://127.0.0.1:8000/verify-hash```
+* Body (raw, JSON):
+```bash
+{
+  "data": "Hello World",
+  "hash_value": "base64-encoded-hash",
+  "algorithm": "sha256"
+}
+```
+
+#### Run API Server Externally:
 ```bash
 uvicorn hash_main:app --host 0.0.0.0 --port 5000
+```
+
+**Generate Hash**
+* Method: ```POST```
+* URL: ```http://16.170.240.86:5000/generate-hash```
+* Body (raw, JSON):
+```bash
+{
+  "data": "Hello World",
+  "algorithm": "sha256"
+}
+```
+
+**Verifying Hashed-token**
+* Method: ```POST```
+* URL: ```http://16.170.240.86:5000/verify-hash```
+* Body (raw, JSON):
+```bash
+{
+  "data": "Hello World",
+  "hash_value": "base64-encoded-hash",
+  "algorithm": "sha256"
+}
 ```
