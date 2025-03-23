@@ -68,6 +68,10 @@ We have already run the above command in an AWS EC2 Instance and hosted the API 
 
 ### **Test Using Postman**:
 
+**Setting Up Headers**
+* Key: ```Content-Type```
+* Value: ```application/json```
+
 **Key Generation**
 * Method: ```POST```
 * URL: ```http://16.170.253.4:8000/generate-key```
