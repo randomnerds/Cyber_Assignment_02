@@ -45,6 +45,7 @@ def generate_hash_endpoint(req: HashRequest):
 # Endpoint: /verify-hash
 # Method: POST
 # Description: Verifies if a hash corresponds to the input data using the given algorithm.@app.post("/verify-hash")
+@app.post("/verify-hash")
 def verify_hash_endpoint(req: VerifyRequest):
     # Check if the hash matches the newly generated one from the input data.
     is_valid = verify_hash(req.data, req.hash_value, req.algorithm)
