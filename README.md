@@ -22,7 +22,7 @@ python app_symm_asymm_enc_dec_V2.py
 ```
 #### **Test Using Postman**:
 
-**Generate Key**
+**Key Generation**
 * Method: ```POST```
 * URL: ```http://127.0.0.1:5000/generate-key```
 * Body (raw, JSON):
@@ -32,18 +32,73 @@ python app_symm_asymm_enc_dec_V2.py
   "key_size": "256"
 }
 ```
+For symmetric-key encryption, AES keys can be generated using key sizes of 128, 192 and 256 bits. For asymmetric-key encryption, RSA key pairs can be generated using key sizes of 2048 and 4096 bits.
 
-**Verifying Hashed-token**
+**Data Encryption**
 * Method: ```POST```
-* URL: ```http://127.0.0.1:8000/verify-hash```
+* URL: ```http://127.0.0.1:5000/encrypt```
 * Body (raw, JSON):
 ```bash
 {
-  "data": "Hello World",
-  "hash_value": "base64-encoded-hash",
-  "algorithm": "sha256"
+  "key_id": "1",
+  "plaintext": "message-to-encrypt",
+  "algorithm": "AES"
 }
 ```
+
+**Data Decryption**
+* Method: ```POST```
+* URL: ```http://127.0.0.1:5000/decrypt```
+* Body (raw, JSON):
+```bash
+{
+  "key_id": "1",
+  "ciphertext": "base64-encoded-ciphertext",
+  "algorithm": "AES"
+}
+```
+For encryption and decryption parts also, both AES and RSA methods can be used with respective key IDs.
+
+#### **B. Run API Server Externally**:
+We have already run the above command in an AWS EC2 Instance and hosted the API under the URL ```http://16.170.240.86:8000``` for generating the hash and verifying the hashed-token. Do note that port `8000` is used for the cyptographic API operations. 
+
+#### **Test Using Postman**:
+
+**Key Generation**
+* Method: ```POST```
+* URL: ```http://16.170.240.86:8000/generate-key```
+* Body (raw, JSON):
+```bash
+{
+  "key_type": "AES",
+  "key_size": "256"
+}
+```
+
+**Data Encryption**
+* Method: ```POST```
+* URL: ```http://16.170.240.86:8000/encrypt```
+* Body (raw, JSON):
+```bash
+{
+  "key_id": "1",
+  "plaintext": "message-to-encrypt",
+  "algorithm": "AES"
+}
+```
+
+**Data Decryption**
+* Method: ```POST```
+* URL: ```http://16.170.240.86:8000/decrypt```
+* Body (raw, JSON):
+```bash
+{
+  "key_id": "1",
+  "ciphertext": "base64-encoded-ciphertext",
+  "algorithm": "AES"
+}
+```
+
 
 ## Hashing and Verifying Hashed-token
 
