@@ -64,7 +64,7 @@ For symmetric-key encryption, AES keys can be generated using key sizes of 128, 
 For encryption and decryption parts also, both AES and RSA methods can be used with respective key IDs.
 
 ## **B. Run API Server Externally**:
-We have already run the above command in an AWS EC2 Instance and hosted the API under the URL ```http://16.170.240.86:8000``` for key generation, encryption and decryption. Do note that port `8000` is used for the cyptographic API operations. 
+We have already run the above command in an AWS EC2 Instance and hosted the API under the URL ```http://51.21.204.16:8000``` for key generation, encryption and decryption. Do note that port `8000` is used for the cyptographic API operations. 
 
 ### **Test Using Postman**:
 
@@ -146,7 +146,7 @@ uvicorn hash_main:app --reload
 ```bash
 uvicorn hash_main:app --host 0.0.0.0 --port 5000
 ```
-We have already run the above command in an AWS EC2 Instance and hosted the API under the URL ```http://16.170.240.86:5000``` for generating the hash and verifying the hashed-token. Do note that port `5000` is used for the hash operations. 
+We have already run the above command in an AWS EC2 Instance and hosted the API under the URL ```http://51.21.204.16:5000``` for generating the hash and verifying the hashed-token. Do note that port `5000` is used for the hash operations. 
 
 ### **Test Using Postman**:
 
