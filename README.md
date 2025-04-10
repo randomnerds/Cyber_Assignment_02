@@ -33,7 +33,7 @@ python app_symm_asymm_enc_dec_V2.py
 ```bash
 {
   "key_type": "AES",
-  "key_size": "256"
+  "key_size": 256
 }
 ```
 For symmetric-key encryption, AES keys can be generated using key sizes of 128, 192 and 256 bits. For asymmetric-key encryption, RSA key pairs can be generated using key sizes of 2048 and 4096 bits.
@@ -79,7 +79,7 @@ We have already run the above command in an AWS EC2 Instance and hosted the API 
 ```bash
 {
   "key_type": "AES",
-  "key_size": "256"
+  "key_size": 256
 }
 ```
 For symmetric-key encryption, AES keys can be generated using key sizes of 128, 192 and 256 bits. For asymmetric-key encryption, RSA key pairs can be generated using key sizes of 2048 and 4096 bits.
